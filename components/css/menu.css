@@ -1,0 +1,83 @@
+
+/* Menu CSS */
+
+/* Effect under the Link on the Menu (the green bar)*/
+.linksmenu {
+  color: #fff;
+  display: inline-block;
+  position: relative;
+}
+.linksmenu:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #13C641;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+
+}
+.linksmenu:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+/* Now some change to the Menu */
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+    color: #0d6efd;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+/* With this the menu follow the page if you want a static menu just delete this line */
+.fixed-top { 
+    position: fixed; /* this line */
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    transition: 500ms;
+}
+
+/* Background color for the menu when is go down */
+.scroll-nav {
+    background-color: #0d0f19 !important; /* this is the line for change the color */
+     opacity: 0.75; 
+     filter: alpha(opacity=75);
+  transition: background-color 500ms linear; 
+  z-index: 1030;
+
+}
+
+/* Color for the links on the Menu */
+.navbar-dark .navbar-nav .nav-link {
+    color: white; /* this is the line for change the color */
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #fff; /* this is the line for change the color */
+    font-size: 20px;
+padding-right: 1.0rem;
+padding-left: 1.0rem;
+    font-weight: bold;
+}
+
+/* Color for the links on the menu when the mouse is over the link */
+.navbar .navbar-nav .nav-link:hover{
+    color: #4fd41b; /* this is the line for change the color */
+}
+
+/* This is the logo part just some space if we need it i add all the lines to change color or other things*/
+.navbar-logo-centered .navbar-nav .nav-link{
+    padding: .5em 1em;
+}
+
+ .nav-link {
+    padding-right: $navbar-nav-link-padding-x;
+    adding-left: $navbar-nav-link-padding-x;
+}
+
